@@ -1,0 +1,25 @@
+.faq{
+  @include conponent_size;
+}
+.faq-list{
+  list-style: none;
+  li{
+    button{
+      display: inline-block;
+      background-color: #444;
+      color: $text-color;
+      font-size: 24px;
+      width: 100%;
+      margin: 5px;
+      padding: 1.5rem;
+      text-align: left;
+    }
+    p{
+      background-color: #444;
+      color: $text-color;
+      font-size: 24px;
+      width: 100%;
+      padding: 1.5rem;
+    }
+  }
+}
