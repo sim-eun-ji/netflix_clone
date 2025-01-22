@@ -2,10 +2,21 @@
   @include conponent_size;
   padding: 20px;
   transition: 0.5s;
+  position: relative;
   &:hover{
     transform: scale(1.05);  
     filter: brightness(1.4);
   }
+  img{
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 5;
+    @include responsive($breakpoint-small){
+      top: 10px;
+    }
 }
 .banner-txt{
   border-radius: 10px;
@@ -13,8 +24,26 @@
   background-image: linear-gradient(to right, #333349, #232344);
   display: flex;
   justify-content: space-between;
+  @include responsive($breakpoint-small){
+    flex-wrap: wrap;
+  }
+  div{
+    padding-left: 50px;
+    @include responsive($breakpoint-small){
+      padding: 0;
+      padding-bottom: 10px;
+    }
+  }
+  }
   button{
     @include button-style;
     background-color: #444;
+  }
+  div{
+    position: relative;
+    // img{
+    //   width: 50px;
+    //   position: absolute;
+    // }
   }
 }

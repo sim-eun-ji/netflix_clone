@@ -1,0 +1,47 @@
+.whyjoin{
+  @include conponent_size;
+  h2{
+    margin: 10px 0;
+  }
+  ul{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    @include responsive($breakpoint-medium){
+      flex-wrap: wrap;
+    };
+    li{
+      width: 25%;
+      height: 400px;
+      margin: 1rem;
+      padding: 20px 10px;
+      border-radius: 10px;
+      background-image: linear-gradient(161deg, #333349, #232344);
+      position: relative;
+      @include responsive($breakpoint-medium){
+        width: 40%;
+        height: 300px;
+      }
+      @include responsive($breakpoint-small){
+        width: 100%;
+        height: 200px;
+      }
+      h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: $font-size-small;
+      }
+      div{
+        font-size: 50px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+
+  }
+  }
+
+
+}
