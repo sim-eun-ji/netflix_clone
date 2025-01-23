@@ -34,6 +34,13 @@
       height: 200px;
       padding: 10px;
       opacity: 1;
+      @include responsive($breakpoint-medium){
+        height: 300px;
+      }
+      @include responsive($breakpoint-small){
+        height: 400px;
+      }
     }
+
   }
 }

@@ -1,0 +1,161 @@
+.login{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-popup{
+  *{
+    margin: 15px 0;
+    font-size: $font-size-medium;
+  }
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  width: 500px;
+  height: 80%;
+  min-height: 707px;
+  padding: 48px 68px;
+  label, input, span, button{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+  }
+  .close{
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+    &:hover{
+      color: #fff;
+    }
+  }
+  h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  input{
+    border: 1px solid #fff;
+    color: white;
+    padding: 10px;
+    background-color: transparent;
+    position: relative;
+    padding-top: 15px;
+    &:focus{
+      // border: 2px solid #fff;
+      box-shadow: inset 0 0 3px #fff;
+      // border: 3px solid #fff;
+      // box-shadow: -2px -2px 0 1px #fff, //왼쪽 위
+      //             2px -2px 0 1px #fff,  //오른쪽 위
+      //             -2px 2px 0 1px #fff,  //왼쪽 아래
+      //             2px 2px 0 1px #fff;   //오른쪽 아래
+    }
+  }
+  button:nth-of-type(1){
+    @include button-style;
+  }
+  button:nth-of-type(2){
+    @include button-style;
+    background-color: #888;
+  }
+  form{
+    label{
+      &.focused{
+        span{
+          font-size: 10px;
+          top: 20%;
+          left: 10px;
+        }
+      }
+      &.error{
+        input{
+          border: 2px solid red;
+          &:focus{
+            border: 2px solid #fff;
+          }
+        }
+      }
+      position: relative;
+      span{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        margin: 0;
+        transition: 0.2s;
+      }
+    }
+    p{
+      text-align: center;
+    }
+    a{
+      display: block;
+      text-align: center;
+    }
+    .email-error,
+    .pw-error
+    {
+      color: $primary-color;
+      font-weight: bolder;
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+}
+// .login-box{
+//   label{
+//     display: flex;
+//     justify-content: flex-start;
+//     input{
+//       width: 20px;
+//       margin-right: 5px;
+//     }
+//   }
+//   p:nth-of-type(1){
+//     font-size: 15px;
+//     margin-bottom: 20px;
+//     a{
+//       font-size: 15px;
+//       font-weight: bold;
+//     }
+//   }
+//   p:nth-of-type(2){
+//     font-size: 13px;
+//     a{
+//       color: #0071eb;
+//       font-size: 13px;
+//     }
+//   }
+// }
+.login-box{
+  input[type=checkbox]{
+    display: inline-block;
+    width: 20px;
+    margin: 0;
+    transform: scale(1.5);
+    outline: none;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+    }
+  }
+  span{
+    display: inline-block;
+    width: auto;
+  }
+  p:last-of-type{
+    font-size: 13px;
+    a{
+      font-size: 13px;
+      color: #0071eb;
+    }
+  }
+}
