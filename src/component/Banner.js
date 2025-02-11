@@ -2,7 +2,7 @@
 const Banner = () => {
   return (
     <section className="banner">
-      <img src="./images/popcorn.png"/>
+      <img src={`${process.env.PUBLIC_URL}/images/popcorn.png`} alt="팝콘"/>
       <div className="banner-txt">
       
         <div>

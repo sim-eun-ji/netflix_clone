@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <nav>
         {/* <h1>NETFLIX</h1> */}
-        <img src="./images/Netflix_Logo_PMS.png" alt="logo-img"/>
+        <img src={`${process.env.PUBLIC_URL}/images/Netflix_Logo_PMS.png`} alt="logo-img"/>
         <div>
           <select>
             <option>한국어</option>
